@@ -1,0 +1,17 @@
+import numpyQuestions as np
+
+# Generate an array of 10 random numbers between 1 and 20
+random_array = np.random.randint(1, 11, 5)
+
+print("You have 3 chances to guess a number in the array!")
+print(f"Guess a number between 1 and 10:")
+
+for i in range(3):
+    guess = int(input("Enter your guess: "))
+    if guess in random_array:
+        print("Congratulations! Your guess is in the array.")
+        break
+    else:
+        print("Sorry, your guess is not in the array. Try again.")
+else:
+    print("Sorry, you didn't guess a number in the array. The array was:", random_array)
